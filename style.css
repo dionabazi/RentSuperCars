@@ -1,0 +1,1076 @@
+                                                                                                                                body,
+                                                                                                                                html {
+                                                                                                                                    overflow-x: hidden;
+                                                                                                                                    scroll-behavior: smooth;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                * {
+                                                                                                                                    margin: 0;
+                                                                                                                                    padding: 0;
+                                                                                                                                }
+                                                                                                                                /* 
+Burger
+*/
+                                                                                                                                
+                                                                                                                                .burger {
+                                                                                                                                    display: none;
+                                                                                                                                    position: relative;
+                                                                                                                                    z-index: 5;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                #main-menu {
+                                                                                                                                    display: block;
+                                                                                                                                    height: 100px;
+                                                                                                                                    width: 100%;
+                                                                                                                                    background: #3D0E61;
+                                                                                                                                    margin: 0px;
+                                                                                                                                    z-index: 9;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                #main-menu ul {
+                                                                                                                                    max-width: 800px;
+                                                                                                                                    width: 100%;
+                                                                                                                                    height: 100%;
+                                                                                                                                    margin: 0px auto;
+                                                                                                                                    padding: 0px;
+                                                                                                                                    display: flex;
+                                                                                                                                    justify-content: space-evenly;
+                                                                                                                                    align-items: center;
+                                                                                                                                    z-index: 9;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                #main-menu li {
+                                                                                                                                    list-style-type: none;
+                                                                                                                                    font-size: 2rem;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                #main-menu a {
+                                                                                                                                    color: #B9FAF8;
+                                                                                                                                    font-size: 1.5rem;
+                                                                                                                                    text-decoration: none;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                #main-menu a:hover {
+                                                                                                                                    text-decoration: underline;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                #hamburger-input {
+                                                                                                                                    display: none;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                #hamburger-menu {
+                                                                                                                                    cursor: pointer;
+                                                                                                                                    position: fixed;
+                                                                                                                                    top: 15px;
+                                                                                                                                    right: 20px;
+                                                                                                                                    width: 40px;
+                                                                                                                                    height: 40px;
+                                                                                                                                    display: inline;
+                                                                                                                                    border: none;
+                                                                                                                                    padding: 0px;
+                                                                                                                                    margin: 0px;
+                                                                                                                                    font-family: 'Cabin', Sans-serif;
+                                                                                                                                    background: linear-gradient( to bottom, #fff, #fff 20%, transparent 20%, transparent 40%, #fff 40%, #fff 60%, transparent 60%, transparent 80%, #fff 80%, #fff 100%);
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                #hamburger-menu #sidebar-menu {
+                                                                                                                                    position: fixed;
+                                                                                                                                    top: 0;
+                                                                                                                                    left: -250px;
+                                                                                                                                    width: 200px;
+                                                                                                                                    height: 100%;
+                                                                                                                                    background-color: #000;
+                                                                                                                                    transition: 0.3s;
+                                                                                                                                    padding: 0px 10px;
+                                                                                                                                    box-sizing: border-box;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                #hamburger-menu h3 {
+                                                                                                                                    color: #222222;
+                                                                                                                                    font-size: 2.2rem;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                #hamburger-menu ul {
+                                                                                                                                    padding-left: 0px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                #hamburger-menu li {
+                                                                                                                                    list-style-type: none;
+                                                                                                                                    line-height: 3rem;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                #hamburger-menu a {
+                                                                                                                                    color: #f2462e;
+                                                                                                                                    font-size: 1.3rem;
+                                                                                                                                    text-decoration: none;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                #hamburger-menu a:hover {
+                                                                                                                                    text-decoration: underline;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                #hamburger-input:checked+#hamburger-menu #sidebar-menu {
+                                                                                                                                    visibility: visible;
+                                                                                                                                    left: 0;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                #hamburger-input:checked~.overlay {
+                                                                                                                                    visibility: visible;
+                                                                                                                                    opacity: 0.4;
+                                                                                                                                }
+                                                                                                                                /*
+                                                                                                                                Burger
+                                                                                                                                */
+                                                                                                                                
+                                                                                                                                .container {
+                                                                                                                                    background-image: url(./812.jpg);
+                                                                                                                                    background-position: center;
+                                                                                                                                    background-repeat: no-repeat;
+                                                                                                                                    background-size: cover;
+                                                                                                                                    position: relative;
+                                                                                                                                    width: 100%;
+                                                                                                                                    height: 100vh;
+                                                                                                                                    object-fit: cover;
+                                                                                                                                    background-attachment: fixed;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container header {
+                                                                                                                                    background-color: #2d394b;
+                                                                                                                                    width: 100%;
+                                                                                                                                    padding: 10px;
+                                                                                                                                    z-index: 1111;
+                                                                                                                                    position: relative;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container header .row {
+                                                                                                                                    text-align: start;
+                                                                                                                                    display: flex;
+                                                                                                                                    position: relative;
+                                                                                                                                    justify-content: start;
+                                                                                                                                    font-family: sans-serif;
+                                                                                                                                    color: #9cc9f5;
+                                                                                                                                    top: 25px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container .buton {
+                                                                                                                                    background-color: #fff;
+                                                                                                                                    color: #000;
+                                                                                                                                    border: 1px solid #fff;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container .buton:hover {
+                                                                                                                                    transition: .3s ease-in;
+                                                                                                                                    background-color: rgba(0, 255, 255, 0.695);
+                                                                                                                                    transform: scale(1.0);
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container header h4:hover {
+                                                                                                                                    transition: 0s ease-in;
+                                                                                                                                    color: #fff;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container::before {
+                                                                                                                                    content: "";
+                                                                                                                                    position: absolute;
+                                                                                                                                    top: 0;
+                                                                                                                                    left: 0;
+                                                                                                                                    inset: 0;
+                                                                                                                                    background: rgba(0, 0, 0, 75%)
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container header i {
+                                                                                                                                    position: relative;
+                                                                                                                                    right: 2%;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container .btn {
+                                                                                                                                    text-align: end;
+                                                                                                                                    display: flex;
+                                                                                                                                    position: relative;
+                                                                                                                                    justify-content: end;
+                                                                                                                                    font-family: sans-serif;
+                                                                                                                                    padding: 0 45px 0 0;
+                                                                                                                                    column-gap: 20px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container button {
+                                                                                                                                    background-color: #29a22e;
+                                                                                                                                    width: 200px;
+                                                                                                                                    height: 50px;
+                                                                                                                                    border: 1px solid #29a22e;
+                                                                                                                                    border-radius: 5px;
+                                                                                                                                    cursor: pointer;
+                                                                                                                                    color: #fff;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container .col {
+                                                                                                                                    text-align: start;
+                                                                                                                                    display: flex;
+                                                                                                                                    position: relative;
+                                                                                                                                    justify-content: start;
+                                                                                                                                    left: 7%;
+                                                                                                                                    top: 20%;
+                                                                                                                                    font-size: 28px;
+                                                                                                                                    color: #fff;
+                                                                                                                                    font-family: sans-serif;
+                                                                                                                                    text-decoration: underline;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container .col h2 {
+                                                                                                                                    cursor: pointer;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container .col::before {
+                                                                                                                                    font-family: sans-serif;
+                                                                                                                                    content: "";
+                                                                                                                                    display: block;
+                                                                                                                                    float: left;
+                                                                                                                                    width: 50px;
+                                                                                                                                    margin-top: 2px;
+                                                                                                                                    margin-left: -10px;
+                                                                                                                                    border-radius: 50%;
+                                                                                                                                    background: #f2462e;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container .list {
+                                                                                                                                    display: flex;
+                                                                                                                                    color: #fff;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container ul {
+                                                                                                                                    display: flex;
+                                                                                                                                    justify-content: space-between;
+                                                                                                                                    align-items: center;
+                                                                                                                                    column-gap: 10px;
+                                                                                                                                    position: relative;
+                                                                                                                                    top: 150px;
+                                                                                                                                    left: 45%;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container .href {
+                                                                                                                                    color: #f2462e;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container li {
+                                                                                                                                    list-style: none;
+                                                                                                                                    display: inline-block;
+                                                                                                                                    margin-left: 40px;
+                                                                                                                                    position: relative;
+                                                                                                                                    cursor: pointer;
+                                                                                                                                    font-size: 25px;
+                                                                                                                                    font-family: sans-serif;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container ul li a {
+                                                                                                                                    text-decoration: none;
+                                                                                                                                    color: #fff;
+                                                                                                                                    position: relative;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container ul li a:hover {
+                                                                                                                                    transition: .3s ease-in;
+                                                                                                                                    color: #f2462e;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container .content {
+                                                                                                                                    text-align: center;
+                                                                                                                                    display: flex;
+                                                                                                                                    position: relative;
+                                                                                                                                    justify-content: center;
+                                                                                                                                    font-size: 35px;
+                                                                                                                                    font-family: sans-serif;
+                                                                                                                                    top: 45%;
+                                                                                                                                    color: #fff;
+                                                                                                                                    text-decoration: underline;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .container .color {
+                                                                                                                                    text-align: center;
+                                                                                                                                    display: flex;
+                                                                                                                                    position: relative;
+                                                                                                                                    justify-content: center;
+                                                                                                                                    color: #f2462e;
+                                                                                                                                    font-family: sans-serif;
+                                                                                                                                    top: 50%;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .wrapper {
+                                                                                                                                    background: #f2462e;
+                                                                                                                                    padding: 0;
+                                                                                                                                    margin: 0 auto;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .wrapper .row {
+                                                                                                                                    display: flex;
+                                                                                                                                    align-items: center;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .wrapper .row .col {
+                                                                                                                                    flex-basis: 50%;
+                                                                                                                                    margin: -4px 0;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .wrapper .row .col:nth-child(1) {
+                                                                                                                                    position: relative;
+                                                                                                                                    background: #f2462e;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .wrapper .row .col img {
+                                                                                                                                    width: 100%;
+                                                                                                                                    object-fit: cover;
+                                                                                                                                    height: 90vh;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .wrapper .content {
+                                                                                                                                    text-align: center;
+                                                                                                                                    position: relative;
+                                                                                                                                    font-size: 35px;
+                                                                                                                                    font-family: sans-serif;
+                                                                                                                                    color: #fff;
+                                                                                                                                    text-decoration: underline;
+                                                                                                                                    padding: 20px 0;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .wrapper .textContent {
+                                                                                                                                    text-align: center;
+                                                                                                                                    position: relative;
+                                                                                                                                    font-family: sans-serif;
+                                                                                                                                    color: #fff;
+                                                                                                                                    padding: 25px 0;
+                                                                                                                                    word-spacing: 2px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .wrapper .textContentX {
+                                                                                                                                    text-align: center;
+                                                                                                                                    position: relative;
+                                                                                                                                    color: #fff;
+                                                                                                                                    padding: 30px 0;
+                                                                                                                                    padding-right: 15px;
+                                                                                                                                    padding-left: 15px;
+                                                                                                                                    min-height: 1px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .wrapper .textContentX p {
+                                                                                                                                    font-family: monospace;
+                                                                                                                                    font-weight: 600;
+                                                                                                                                    padding: 10px 0;
+                                                                                                                                    letter-spacing: 0.5px;
+                                                                                                                                    height: 120px;
+                                                                                                                                    font-size: 20px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .vlog {
+                                                                                                                                    background-color: #fff;
+                                                                                                                                    width: 100%;
+                                                                                                                                    height: 90vh;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .vlog .row {
+                                                                                                                                    display: flex;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .vlog .row .col {
+                                                                                                                                    flex-basis: 50%;
+                                                                                                                                    margin: -3.2px 0;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .vlog .row .col:nth-child(1) {
+                                                                                                                                    position: relative;
+                                                                                                                                    background: #fff;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .vlog .row .col img {
+                                                                                                                                    width: 100%;
+                                                                                                                                    object-fit: cover;
+                                                                                                                                    height: 90vh;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .vlog .content {
+                                                                                                                                    text-align: start;
+                                                                                                                                    position: relative;
+                                                                                                                                    font-size: 40px;
+                                                                                                                                    font-family: monospace;
+                                                                                                                                    color: #000;
+                                                                                                                                    padding-left: 20px;
+                                                                                                                                    text-decoration: underline;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .vlog .rows {
+                                                                                                                                    padding-left: 50px;
+                                                                                                                                    padding-top: 80px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .vlog .paragraph {
+                                                                                                                                    text-align: start;
+                                                                                                                                    position: relative;
+                                                                                                                                    color: #625f5f;
+                                                                                                                                    font-family: monospace;
+                                                                                                                                    padding-left: 20px;
+                                                                                                                                    font-size: 20px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .vlog .budget h2 {
+                                                                                                                                    color: #f2462e;
+                                                                                                                                    font-size: 25px;
+                                                                                                                                    padding-top: 70px;
+                                                                                                                                    font-family: monospace;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .vlog .budget {
+                                                                                                                                    text-align: start;
+                                                                                                                                    position: relative;
+                                                                                                                                    padding-left: 50px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .vlog .color h2 {
+                                                                                                                                    color: #f2462e;
+                                                                                                                                    text-decoration: none;
+                                                                                                                                    font-size: 25px;
+                                                                                                                                    font-family: monospace;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .vlog .color {
+                                                                                                                                    text-align: start;
+                                                                                                                                    position: relative;
+                                                                                                                                    padding-left: 50px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog {
+                                                                                                                                    background-color: #fff;
+                                                                                                                                    width: 100%;
+                                                                                                                                    background-color: black;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .row {
+                                                                                                                                    display: flex;
+                                                                                                                                    justify-content: space-between;
+                                                                                                                                    align-items: center;
+                                                                                                                                    padding: 15px 0;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .row .col {
+                                                                                                                                    flex-basis: 33%;
+                                                                                                                                    position: relative;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .row .col-ferrari {
+                                                                                                                                    background: url(./ferrari.jpg);
+                                                                                                                                    width: 100%;
+                                                                                                                                    height: 30vh;
+                                                                                                                                    object-fit: cover;
+                                                                                                                                    background-position: center;
+                                                                                                                                    background-repeat: no-repeat;
+                                                                                                                                    background-size: cover;
+                                                                                                                                    cursor: pointer;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .row .col-ferrari:hover {
+                                                                                                                                    transition: .5s ease-in;
+                                                                                                                                    background-image: url(./ferariri.webp);
+                                                                                                                                    width: 100%;
+                                                                                                                                    height: 30vh;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .row .col-california {
+                                                                                                                                    background: url(./california.jpg);
+                                                                                                                                    width: 100%;
+                                                                                                                                    height: 30vh;
+                                                                                                                                    object-fit: cover;
+                                                                                                                                    background-position: center;
+                                                                                                                                    background-repeat: no-repeat;
+                                                                                                                                    background-size: cover;
+                                                                                                                                    cursor: pointer;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .row .col-california:hover {
+                                                                                                                                    transition: .5s ease-in;
+                                                                                                                                    background-image: url(./interior.jpg);
+                                                                                                                                    width: 100%;
+                                                                                                                                    height: 30vh;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .col::before {
+                                                                                                                                    content: "";
+                                                                                                                                    position: absolute;
+                                                                                                                                    top: 0;
+                                                                                                                                    inset: 0;
+                                                                                                                                    background: rgba(0, 0, 0, 50%);
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .col .car-info {
+                                                                                                                                    font-size: 20px;
+                                                                                                                                    padding-top: 50px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .col .car-info .offer {
+                                                                                                                                    text-decoration: line-through;
+                                                                                                                                    color: #f2462e;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .row .col .center-information {
+                                                                                                                                    justify-content: center;
+                                                                                                                                    align-items: center;
+                                                                                                                                    padding: 10px;
+                                                                                                                                    margin: 0 auto;
+                                                                                                                                    position: relative;
+                                                                                                                                    row-gap: 30px;
+                                                                                                                                    padding: 50px 40px;
+                                                                                                                                    font-size: 16px;
+                                                                                                                                    color: #fff;
+                                                                                                                                    font-family: monospace;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .row .col-mclaren {
+                                                                                                                                    background: url(./mclaren.jpg);
+                                                                                                                                    width: 100%;
+                                                                                                                                    height: 30vh;
+                                                                                                                                    object-fit: cover;
+                                                                                                                                    background-position: center;
+                                                                                                                                    background-repeat: no-repeat;
+                                                                                                                                    background-size: cover;
+                                                                                                                                    cursor: pointer;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .row .col-mclaren:hover {
+                                                                                                                                    background-image: url(./650s.webp);
+                                                                                                                                    width: 100%;
+                                                                                                                                    height: 30vh;
+                                                                                                                                    transition: .5s ease-in;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .row .col-aston {
+                                                                                                                                    background: url(./martin.jpg);
+                                                                                                                                    width: 100%;
+                                                                                                                                    height: 30vh;
+                                                                                                                                    object-fit: cover;
+                                                                                                                                    background-position: center;
+                                                                                                                                    background-repeat: no-repeat;
+                                                                                                                                    background-size: cover;
+                                                                                                                                    cursor: pointer;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .row .col-aston:hover {
+                                                                                                                                    background-image: url(./db9.jpg);
+                                                                                                                                    width: 100%;
+                                                                                                                                    height: 30vh;
+                                                                                                                                    transition: .5s ease-in;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .row .col-mercedes {
+                                                                                                                                    background: url(./murrcedes.jpg);
+                                                                                                                                    width: 100%;
+                                                                                                                                    height: 30vh;
+                                                                                                                                    object-fit: cover;
+                                                                                                                                    background-position: center;
+                                                                                                                                    background-repeat: no-repeat;
+                                                                                                                                    background-size: cover;
+                                                                                                                                    cursor: pointer;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .row .col-mercedes:hover {
+                                                                                                                                    background-image: url(./cover.jpg);
+                                                                                                                                    width: 100%;
+                                                                                                                                    height: 30vh;
+                                                                                                                                    transition: .5s ease-in;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .row .col-lexus {
+                                                                                                                                    background: url(./lfa.jpg);
+                                                                                                                                    width: 100%;
+                                                                                                                                    height: 30vh;
+                                                                                                                                    object-fit: cover;
+                                                                                                                                    background-position: center;
+                                                                                                                                    background-repeat: no-repeat;
+                                                                                                                                    background-size: cover;
+                                                                                                                                    cursor: pointer;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .blog .row .col-lexus:hover {
+                                                                                                                                    background-image: url(./black\ lfa.jpg);
+                                                                                                                                    width: 100%;
+                                                                                                                                    height: 30vh;
+                                                                                                                                    transition: .5s ease-in;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase {
+                                                                                                                                    background-color: #242424;
+                                                                                                                                    width: 100%;
+                                                                                                                                    height: 90vh;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .row {
+                                                                                                                                    display: flex;
+                                                                                                                                    align-items: center;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .row .col:nth-child(1) {
+                                                                                                                                    position: relative;
+                                                                                                                                    background: #242424;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .row .col {
+                                                                                                                                    flex-basis: 50%;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .content {
+                                                                                                                                    text-align: start;
+                                                                                                                                    position: relative;
+                                                                                                                                    color: #fff;
+                                                                                                                                    font-size: 40px;
+                                                                                                                                    text-decoration: underline;
+                                                                                                                                    padding-top: 60px;
+                                                                                                                                    padding-left: 60px;
+                                                                                                                                    font-family: sans-serif;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .center-info {
+                                                                                                                                    text-align: start;
+                                                                                                                                    position: relative;
+                                                                                                                                    color: #fff;
+                                                                                                                                    padding-left: 63px;
+                                                                                                                                    padding-top: 60px;
+                                                                                                                                    font-size: 19px;
+                                                                                                                                    font-family: sans-serif;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .center-info i {
+                                                                                                                                    color: #fff;
+                                                                                                                                    padding-right: 16px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .cont {
+                                                                                                                                    text-align: start;
+                                                                                                                                    position: relative;
+                                                                                                                                    color: #fff;
+                                                                                                                                    padding-left: 63px;
+                                                                                                                                    padding-top: 60px;
+                                                                                                                                    font-size: 19px;
+                                                                                                                                    font-family: sans-serif;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .cont i {
+                                                                                                                                    color: #fff;
+                                                                                                                                    padding-right: 16px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .sun {
+                                                                                                                                    text-align: start;
+                                                                                                                                    position: relative;
+                                                                                                                                    color: #f2462e;
+                                                                                                                                    padding-left: 63px;
+                                                                                                                                    padding-top: 60px;
+                                                                                                                                    font-size: 19px;
+                                                                                                                                    font-family: sans-serif;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .sun i {
+                                                                                                                                    color: #fff;
+                                                                                                                                    padding-right: 16px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .days {
+                                                                                                                                    text-align: start;
+                                                                                                                                    position: relative;
+                                                                                                                                    color: #fff;
+                                                                                                                                    padding-left: 63px;
+                                                                                                                                    padding-top: 60px;
+                                                                                                                                    font-size: 19px;
+                                                                                                                                    font-family: sans-serif;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .days i {
+                                                                                                                                    color: #fff;
+                                                                                                                                    padding-right: 16px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .icons {
+                                                                                                                                    text-align: start;
+                                                                                                                                    position: relative;
+                                                                                                                                    padding-left: 33px;
+                                                                                                                                    padding-top: 60px;
+                                                                                                                                    font-size: 30px;
+                                                                                                                                    color: #fff;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .icons i {
+                                                                                                                                    cursor: pointer;
+                                                                                                                                    margin-left: 30px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .icons i:hover {
+                                                                                                                                    transition: .5s ease-in;
+                                                                                                                                    color: rgb(62, 62, 178);
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .fonts {
+                                                                                                                                    text-align: start;
+                                                                                                                                    position: relative;
+                                                                                                                                    color: #fff;
+                                                                                                                                    font-family: sans-serif;
+                                                                                                                                    padding-left: 60px;
+                                                                                                                                    padding-top: 60px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase span:hover {
+                                                                                                                                    transition: .5s ease-in;
+                                                                                                                                    color: #f2462e;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase span {
+                                                                                                                                    cursor: pointer;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase iframe {
+                                                                                                                                    border-radius: 10px;
+                                                                                                                                    height: 80vh;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .uppercase .map {
+                                                                                                                                    padding-top: 50px;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                @media (max-width:650px) {
+                                                                                                                                    html,
+                                                                                                                                    body {
+                                                                                                                                        overflow-x: hidden;
+                                                                                                                                    }
+                                                                                                                                    * {
+                                                                                                                                        margin: 0;
+                                                                                                                                        padding: 0;
+                                                                                                                                        box-sizing: border-box;
+                                                                                                                                    }
+                                                                                                                                    .container .list {
+                                                                                                                                        display: none;
+                                                                                                                                    }
+                                                                                                                                    .container ul {
+                                                                                                                                        display: block;
+                                                                                                                                        position: relative;
+                                                                                                                                        top: 10px;
+                                                                                                                                        left: -17%;
+                                                                                                                                    }
+                                                                                                                                    .burger {
+                                                                                                                                        display: block;
+                                                                                                                                    }
+                                                                                                                                    .container .col {
+                                                                                                                                        font-size: 20px;
+                                                                                                                                    }
+                                                                                                                                    .container header button {
+                                                                                                                                        font-size: 0px;
+                                                                                                                                    }
+                                                                                                                                    .container header i {
+                                                                                                                                        font-size: 20px;
+                                                                                                                                    }
+                                                                                                                                    .container header button {
+                                                                                                                                        width: 100px;
+                                                                                                                                        height: 50px;
+                                                                                                                                    }
+                                                                                                                                    .container .btn {
+                                                                                                                                        text-align: start;
+                                                                                                                                        position: relative;
+                                                                                                                                        justify-content: start;
+                                                                                                                                    }
+                                                                                                                                    .container header .row {
+                                                                                                                                        display: none;
+                                                                                                                                    }
+                                                                                                                                    .container .col::before {
+                                                                                                                                        font-family: sans-serif;
+                                                                                                                                        content: "";
+                                                                                                                                        display: block;
+                                                                                                                                        float: left;
+                                                                                                                                        width: 49px;
+                                                                                                                                        margin-top: -1px;
+                                                                                                                                        margin-left: -12px;
+                                                                                                                                        margin-bottom: -5px;
+                                                                                                                                        border-radius: 50%;
+                                                                                                                                        background: #f2462e;
+                                                                                                                                    }
+                                                                                                                                    .container .content {
+                                                                                                                                        font-size: 15px;
+                                                                                                                                    }
+                                                                                                                                    .container .color {
+                                                                                                                                        font-size: 15px;
+                                                                                                                                    }
+                                                                                                                                    .wrapper .row {
+                                                                                                                                        flex-direction: column;
+                                                                                                                                    }
+                                                                                                                                    .wrapper .content {
+                                                                                                                                        font-size: 15px;
+                                                                                                                                    }
+                                                                                                                                    .wrapper .textContent {
+                                                                                                                                        font-size: 10px;
+                                                                                                                                        position: relative;
+                                                                                                                                        bottom: 34px;
+                                                                                                                                    }
+                                                                                                                                    .wrapper .textContentX p {
+                                                                                                                                        font-size: 13px;
+                                                                                                                                        bottom: 93px;
+                                                                                                                                        position: relative;
+                                                                                                                                    }
+                                                                                                                                    .wrapper .row .col {
+                                                                                                                                        margin: -10px 0;
+                                                                                                                                    }
+                                                                                                                                    .wrapper .row .col img {
+                                                                                                                                        width: 100%;
+                                                                                                                                        height: 100%;
+                                                                                                                                        object-fit: cover;
+                                                                                                                                    }
+                                                                                                                                    .vlog .row {
+                                                                                                                                        flex-direction: column;
+                                                                                                                                    }
+                                                                                                                                    .vlog {
+                                                                                                                                        height: 100%;
+                                                                                                                                    }
+                                                                                                                                    .vlog .row .col img {
+                                                                                                                                        height: 100%;
+                                                                                                                                        width: 100%;
+                                                                                                                                        object-fit: cover;
+                                                                                                                                    }
+                                                                                                                                    .vlog .rows {
+                                                                                                                                        font-size: 20px;
+                                                                                                                                    }
+                                                                                                                                    .vlog .budget h2 {
+                                                                                                                                        font-size: 15px;
+                                                                                                                                        padding: 30px 0;
+                                                                                                                                    }
+                                                                                                                                    .vlog .color h2 {
+                                                                                                                                        font-size: 15px;
+                                                                                                                                        padding: 0px 0;
+                                                                                                                                    }
+                                                                                                                                    .vlog .paragraph {
+                                                                                                                                        font-size: 15px;
+                                                                                                                                        padding: 30px;
+                                                                                                                                    }
+                                                                                                                                    .blog .row {
+                                                                                                                                        flex-direction: column;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .content {
+                                                                                                                                        font-size: 15px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .center-info {
+                                                                                                                                        font-size: 15px;
+                                                                                                                                        padding-left: 4px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .sun {
+                                                                                                                                        padding-left: 5px;
+                                                                                                                                        font-size: 15px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .row {
+                                                                                                                                        flex-direction: column;
+                                                                                                                                        padding: 5px 8px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase iframe {
+                                                                                                                                        width: 100%;
+                                                                                                                                        height: 50vh;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .cont {
+                                                                                                                                        padding-left: 5px;
+                                                                                                                                        font-size: 15px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .days {
+                                                                                                                                        padding-left: 4px;
+                                                                                                                                        font-size: 12px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .icons i {
+                                                                                                                                        margin-left: 7px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .fonts {
+                                                                                                                                        padding-left: 6px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .icons {
+                                                                                                                                        padding-left: 0px;
+                                                                                                                                        font-size: 19px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase {
+                                                                                                                                        width: 100%;
+                                                                                                                                        height: 100%;
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                @media (651px <=width <=897px) {
+                                                                                                                                    html,
+                                                                                                                                    body {
+                                                                                                                                        overflow-x: hidden;
+                                                                                                                                    }
+                                                                                                                                    * {
+                                                                                                                                        margin: 0;
+                                                                                                                                        padding: 0;
+                                                                                                                                        box-sizing: border-box;
+                                                                                                                                    }
+                                                                                                                                    .container .col {
+                                                                                                                                        font-size: 25px;
+                                                                                                                                    }
+                                                                                                                                    .burger {
+                                                                                                                                        display: block;
+                                                                                                                                    }
+                                                                                                                                    .container .list {
+                                                                                                                                        display: none;
+                                                                                                                                    }
+                                                                                                                                    .container ul {
+                                                                                                                                        display: block;
+                                                                                                                                        position: relative;
+                                                                                                                                        top: 10px;
+                                                                                                                                        left: -17%;
+                                                                                                                                    }
+                                                                                                                                    .container header .row {
+                                                                                                                                        display: none;
+                                                                                                                                    }
+                                                                                                                                    .container .btn {
+                                                                                                                                        text-align: start;
+                                                                                                                                        position: relative;
+                                                                                                                                        justify-content: start;
+                                                                                                                                    }
+                                                                                                                                    .container header button {
+                                                                                                                                        width: 150px;
+                                                                                                                                        height: 50px;
+                                                                                                                                    }
+                                                                                                                                    .container header button {
+                                                                                                                                        font-size: 0px;
+                                                                                                                                    }
+                                                                                                                                    .container header i {
+                                                                                                                                        font-size: 25px;
+                                                                                                                                    }
+                                                                                                                                    .container .content {
+                                                                                                                                        font-size: 20px;
+                                                                                                                                    }
+                                                                                                                                    .wrapper .row {
+                                                                                                                                        flex-direction: column;
+                                                                                                                                    }
+                                                                                                                                    .wrapper .content {
+                                                                                                                                        font-size: 20px;
+                                                                                                                                    }
+                                                                                                                                    .wrapper .textContent {
+                                                                                                                                        font-size: 12px;
+                                                                                                                                    }
+                                                                                                                                    .wrapper .textContentX p {
+                                                                                                                                        padding: 0px 0;
+                                                                                                                                        font-size: 16px;
+                                                                                                                                    }
+                                                                                                                                    .wrapper .row .col img {
+                                                                                                                                        width: 100%;
+                                                                                                                                        height: 100%;
+                                                                                                                                    }
+                                                                                                                                    .wrapper .row .col {
+                                                                                                                                        margin: -4px;
+                                                                                                                                    }
+                                                                                                                                    .vlog .row .col img {
+                                                                                                                                        width: 100%;
+                                                                                                                                        height: 100%;
+                                                                                                                                    }
+                                                                                                                                    .vlog .row {
+                                                                                                                                        flex-direction: column;
+                                                                                                                                    }
+                                                                                                                                    .vlog {
+                                                                                                                                        width: 100%;
+                                                                                                                                        height: 100%;
+                                                                                                                                    }
+                                                                                                                                    .vlog .rows {
+                                                                                                                                        font-size: 25px;
+                                                                                                                                        padding: 50px;
+                                                                                                                                    }
+                                                                                                                                    .vlog .budget h2 {
+                                                                                                                                        font-size: 20px;
+                                                                                                                                        padding: 0px;
+                                                                                                                                    }
+                                                                                                                                    .vlog .color h2 {
+                                                                                                                                        font-size: 20px;
+                                                                                                                                        padding: 0;
+                                                                                                                                    }
+                                                                                                                                    .vlog .paragraph {
+                                                                                                                                        padding: 43px 10px 20px;
+                                                                                                                                        font-size: 18px;
+                                                                                                                                    }
+                                                                                                                                    .blog .row {
+                                                                                                                                        flex-direction: column;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .content {
+                                                                                                                                        font-size: 40px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .row {
+                                                                                                                                        flex-direction: column;
+                                                                                                                                    }
+                                                                                                                                    .uppercase iframe {
+                                                                                                                                        width: 100%;
+                                                                                                                                        height: 60vh;
+                                                                                                                                    }
+                                                                                                                                    .uppercase {
+                                                                                                                                        width: 100%;
+                                                                                                                                        height: 100%;
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                @media (898px <=width <=1024px) {
+                                                                                                                                    html,
+                                                                                                                                    body {
+                                                                                                                                        overflow-x: hidden;
+                                                                                                                                    }
+                                                                                                                                    * {
+                                                                                                                                        margin: 0;
+                                                                                                                                        padding: 0;
+                                                                                                                                        box-sizing: border-box;
+                                                                                                                                    }
+                                                                                                                                    .uppercase {
+                                                                                                                                        width: 100%;
+                                                                                                                                        height: 100%;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .content {
+                                                                                                                                        padding-right: 10px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .cont {
+                                                                                                                                        padding-right: 10px;
+                                                                                                                                        font-size: 13px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .sun {
+                                                                                                                                        padding-right: 10px;
+                                                                                                                                        font-size: 13px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .center-info {
+                                                                                                                                        padding-right: 10px;
+                                                                                                                                        font-size: 13px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase iframe {
+                                                                                                                                        width: 100%;
+                                                                                                                                        height: 70vh;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .days {
+                                                                                                                                        padding-right: 10px;
+                                                                                                                                        font-size: 13px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .days i {
+                                                                                                                                        padding-right: 10px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .icons {
+                                                                                                                                        padding-right: 10px;
+                                                                                                                                        font-size: 13px;
+                                                                                                                                    }
+                                                                                                                                    .uppercase .fonts {
+                                                                                                                                        padding-right: 10px;
+                                                                                                                                        font-size: 13px;
+                                                                                                                                    }
+                                                                                                                                    .blog .col .car-info {
+                                                                                                                                        font-size: 17px;
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                @media (1025px <=width <=1241px) {
+                                                                                                                                    html,
+                                                                                                                                    body {
+                                                                                                                                        overflow-x: hidden;
+                                                                                                                                    }
+                                                                                                                                    * {
+                                                                                                                                        margin: 0;
+                                                                                                                                        padding: 0;
+                                                                                                                                        box-sizing: border-box;
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                @media only screen and (min-width:1241px) {
+                                                                                                                                    html,
+                                                                                                                                    body {
+                                                                                                                                        overflow-x: hidden;
+                                                                                                                                    }
+                                                                                                                                    * {
+                                                                                                                                        margin: 0;
+                                                                                                                                        padding: 0;
+                                                                                                                                        box-sizing: border-box;
+                                                                                                                                    }
+                                                                                                                                }
